@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Finanzübersicht
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <section>        
+        Ihr Saldo am {{date}} beträgt<br />
+        <span class="green strong">2432.54 €</span> 
+        <br />
+        <br />
+        Ihre letzten Transaktionen:
+    </section>
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <button ion-item (click)="openItem(item)">
+                <img [src]="item.profilePic" />
+                <h2>{{item.name}}</h2>
+                <p><span>{{item.date}}</span></p>
+                <ion-note item-end *ngIf="item.amount" class="{{item.cssclass}}">{{item.amount}} €</ion-note>
+            </button>
+        </ion-item>
+    </ion-list>
+</ion-content>

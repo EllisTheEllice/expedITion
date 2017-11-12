@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ihre Ansprechpartner
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>Ihre Ansprechpartner</ion-list-header>
+        <ion-item-sliding *ngFor="let contact of contacts">
+            <button ion-item>
+                <ion-avatar item-start>
+                    <img [src]="contact.profilePic" />
+                </ion-avatar>
+                <strong>{{contact.title}}</strong><br />
+
+                Herr {{contact.name}} {{contact.lastname}}<br />
+                Fon: {{contact.phone}}<br />
+                E-Mail: {{contact.email}}
+            </button>
+            <ion-item-options>
+                <button ion-button>
+                    Anrufen
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
