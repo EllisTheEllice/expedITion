@@ -11,4 +11,4 @@ tar -czf app.tgz ./www/
 host=$(cat /tmp/dns)
 echo $host
 scp -i ~/.ssh/jenkins.pem -o "StrictHostKeyChecking=no" $WORKSPACE/environment/app.tgz ubuntu@$host:/tmp/
-ssh -i ~/.ssh/jenkins.pem -o "StrictHostKeyChecking=no" ubuntu@$host "sudo tar -C /var/www/html -xzf /tmp/app.tgz && sudo mv /var/www/html/www/* /var/www/html/"
+ssh -i ~/.ssh/jenkins.pem -o "StrictHostKeyChecking=no" ubuntu@$host "sudo rm -Rf /var/www/html/* && sudo tar -C /var/www/html -xzf /tmp/app.tgz && sudo mv /var/www/html/www/* /var/www/html/"
