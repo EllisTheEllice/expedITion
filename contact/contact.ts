@@ -27,7 +27,7 @@ export class ContactPage {
         //            () => {
         //                console.log('Yeah!');
         //            });
-        this._http.get("https://c797go5v9i.execute-api.eu-west-1.amazonaws.com/dev/contacts").toPromise().then(this.extractData).catch(this.handleErrorPromise);;
+        this._http.get("https://%apiid%.execute-api.eu-west-1.amazonaws.com/dev/contacts").toPromise().then(this.extractData).catch(this.handleErrorPromise);;
 
         //        var c1 = new Contact("Herrmann", "Klose", "Kundenbetreuer", "+49 211 12345-5", "h.klose@myfinance.de", "assets/imgs/speakers/eagle.jpg");
         //        var c2 = new Contact("Dingeling", "King", "Bankdirektor", "+49 211 12345-1", "chef@myfinance.de", "assets/imgs/speakers/bear.jpg");

@@ -5,7 +5,8 @@ cp -r ../contact ./src/pages/
 cp -r ../finance ./src/pages/
 cp -r ../home ./src/pages/
 apiid=$(cat /tmp/apiid)
-echo $apiid
+sed -i -e "s/%apiid%/$apiid/g" ./src/pages/contact/contact.ts
+sed -i -e "s/%apiid%/$apiid/g" ./src/pages/finance/finance.ts
 ionic build
 tar -czf app.tgz ./www/
 host=$(cat /tmp/dns)

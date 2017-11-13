@@ -30,7 +30,7 @@ export class FinancePage {
         //        var item6 = new Item("Molly Mouse", "450,00 €", true,"26.11.        2017");
         //        this.items.push(item1, item2, item3, item4, item5, item6);
 
-        this._http.get("https://c797go5v9i.execute-api.eu-west-1.amazonaws.com/dev/transactions").toPromise().then(this.extractData).catch(this.handleErrorPromise);;
+        this._http.get("https://%apiid%.execute-api.eu-west-1.amazonaws.com/dev/transactions").toPromise().then(this.extractData).catch(this.handleErrorPromise);;
 
     }
 
