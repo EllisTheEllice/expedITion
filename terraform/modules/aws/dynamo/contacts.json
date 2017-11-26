@@ -1,0 +1,28 @@
+{
+    "contacts": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "email": {"S": "h.klose@myfinance.de"},
+                    "lastname": {"S": "Klose"},
+                    "name": {"S": "Herrmann"},
+                    "phone": {"S": "+49 211 12345-5"},
+                    "title": {"S": "Kundenbetreuer"},
+                    "profilePic": {"S": "assets/imgs/speakers/eagle.jpg"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+              "Item": {
+                  "email": {"S": "chef@myfinance.de"},
+                  "lastname": {"S": "Dingeling"},
+                  "name": {"S": "King"},
+                  "phone": {"S": "+49 211 12345-1"},
+                  "title": {"S": "Bankdirektor"},
+                  "profilePic": {"S": "assets/imgs/speakers/bear.jpg"}
+              }
+            }
+        }
+    ]
+}

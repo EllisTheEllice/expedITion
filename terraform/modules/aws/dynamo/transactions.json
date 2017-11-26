@@ -1,0 +1,46 @@
+{
+    "transactions": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "amount": {"S": "198.55"},
+                    "date": {"S": "01.12.2017"},
+                    "id": {"N": "1"},
+                    "incoming": {"BOOL": false},
+                    "name": {"S": "Kita"}
+                }
+            }
+        },        
+        {
+            "PutRequest": {
+                "Item": {
+                    "amount": {"S": "2.000"},
+                    "date": {"S": "28.11.2017"},
+                    "id": {"N": "2"},
+                    "incoming": {"BOOL": true},
+                    "name": {"S": "Capgemini DE"}
+                }
+            }
+        },        {
+            "PutRequest": {
+                "Item": {
+                    "amount": {"S": "89.23"},
+                    "date": {"S": "28.11.2017"},
+                    "id": {"N": "3"},
+                    "incoming": {"BOOL": false},
+                    "name": {"S": "Edeka"}
+                }
+            }
+        },        {
+            "PutRequest": {
+                "Item": {
+                    "amount": {"S": "150"},
+                    "date": {"S": "28.11.2017"},
+                    "id": {"N": "4"},
+                    "incoming": {"BOOL": true},
+                    "name": {"S": "Eddie Eagle"}
+                }
+            }
+        }
+    ]
+}
