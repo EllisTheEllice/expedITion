@@ -1,4 +1,4 @@
-export PATH=~/.local/bin:$PATH
+export PATH=/home/tomcat/.local/bin:$PATH
 cd finance/lambda
 zip index.zip index.js
 aws lambda update-function-code --function-name transactionslambda --zip-file fileb://index.zip

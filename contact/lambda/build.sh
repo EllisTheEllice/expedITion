@@ -1,4 +1,4 @@
-export PATH=~/.local/bin:$PATH
+export PATH=/home/tomcat/.local/bin:$PATH
 cd contact/lambda
 zip index.zip index.js
 aws lambda update-function-code --function-name contactslambda --zip-file fileb://index.zip
