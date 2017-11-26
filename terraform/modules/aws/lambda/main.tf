@@ -66,13 +66,13 @@ resource "aws_iam_role_policy_attachment" "lambda_lambdarole_attachment2" {
 
 data "archive_file" "contacts-zip" {
   type = "zip"
-  source_file = "${path.module}/contacts/index.js"
+  source_file = "${path.module}/../../../../contact/lambda/index.js"
   output_path = "${path.module}/contacts/lambda.zip"
 }
 
 data "archive_file" "transactions-zip" {
   type = "zip"
-  source_file = "${path.module}/transactions/index.js"
+  source_file = "${path.module}/../../../../finance/lambda/index.js"
   output_path = "${path.module}/transactions/lambda.zip"
 }
 
