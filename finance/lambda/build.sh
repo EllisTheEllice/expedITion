@@ -1,3 +1,4 @@
+export LD_LIBRARY_PATH=""
 export PATH=/home/tomcat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 cd finance/lambda
 zip index.zip index.js
