@@ -42,8 +42,8 @@ exports.handler = (event, context, callback) => {
               }, 
               TableName: "contacts"
              };
-            //dynamo.getItem(params,done);
-            dynamo.scan({ TableName: "contacts" }, done);
+            dynamo.getItem(params,done);
+            //dynamo.scan({ TableName: "contacts" }, done);
             break;
         case 'POST':
             dynamo.putItem(JSON.parse(event.body), done);
