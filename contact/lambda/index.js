@@ -36,14 +36,18 @@ exports.handler = (event, context, callback) => {
         case 'GET':
              var params = {
               Key: {
-               "lastname": {
-                 S: "Klose"
-                }
+               "lastname": "Klose"
               }, 
               TableName: "contacts"
              };
-            //dynamo.getItem(params,done);
-            dynamo.scan({ TableName: "contacts" }, done);
+            dynamo.getItem(params,function(err,data){
+                console.log(data);
+                //var item=JSON.parse(data);
+                var items={"Count":1, "Items": [data.Item]};
+                console.log(items);
+                done(err,items);
+            });
+            //dynamo.scan({ TableName: "contacts" }, done);
             break;
         case 'POST':
             dynamo.putItem(JSON.parse(event.body), done);
