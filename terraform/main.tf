@@ -65,3 +65,11 @@ module "aws_s3" {
   target_lambda_function_arn  = "${module.aws_lambda.function_arn}"  
   bucketname                  = "${var.aws_s3_bucketname}"
 }*/
+
+output "web-server-ip" {
+  value = "${module.aws_ec2.web-server-ip}"
+}
+
+output "jenkins-ip" {
+  value = "${module.aws_ec2.jenkins-ip}"
+}

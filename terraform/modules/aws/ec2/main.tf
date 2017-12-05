@@ -55,3 +55,11 @@ resource "aws_instance" "jenkins" {
     Name = "jenkins"
   }
 }
+
+output "web-server-ip" {
+  value = "${aws_instance.web.public_ip}"
+}
+
+output "jenkins-ip" {
+  value = "${aws_instance.jenkins.public_ip}"
+}

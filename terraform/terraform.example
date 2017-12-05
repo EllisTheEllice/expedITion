@@ -1,0 +1,12 @@
+/*
+# ==============
+#
+#  AWS variables
+#
+# ==============
+*/
+aws_access_key      =   "xxx"
+aws_secret_key      =   "xxx"
+aws_account_id      =   "xxx"
+aws_region          =   "eu-west-1"
+aws_api_apiname     =   "expedition-api"
