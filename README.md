@@ -3,7 +3,7 @@
 The is a simple demo workflow to show how Infrastructure as Code and Continous Deployment (CD) can look like.
 This demo uses terraform to spin up the following architecture:
 
-![alt text](https://github.com/simibimi/expedition/docs/architecture.png "Architecture")
+![alt text](https://github.com/simibimi/expedition/blob/master/docs/architecture.png "Architecture")
 
 
 ## How to set up the environment
