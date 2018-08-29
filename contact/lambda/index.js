@@ -40,14 +40,14 @@ exports.handler = (event, context, callback) => {
               }, 
               TableName: "contacts"
              };
-            /*dynamo.getItem(params,function(err,data){
+            dynamo.getItem(params,function(err,data){
                 console.log(data);
                 //var item=JSON.parse(data);
                 var items={"Count":1, "Items": [data.Item]};
                 console.log(items);
                 done(err,items);
-            });*/
-            dynamo.scan({ TableName: "contacts" }, done);
+            });
+            //dynamo.scan({ TableName: "contacts" }, done);
             break;
         case 'POST':
             dynamo.putItem(JSON.parse(event.body), done);

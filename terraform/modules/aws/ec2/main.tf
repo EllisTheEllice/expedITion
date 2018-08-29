@@ -25,7 +25,7 @@ resource "aws_instance" "web" {
 
 resource "aws_instance" "jenkins" {
   depends_on    = ["aws_instance.web"]
-  ami           = "ami-2c983155"
+  ami           = "ami-04bdbc15b433e716b"
   instance_type = "t2.micro"
   associate_public_ip_address=true
   key_name = "jenkins"
