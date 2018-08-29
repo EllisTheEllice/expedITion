@@ -1,4 +1,5 @@
 export PATH=$PATH:/home/bitnami/.nvm/versions/node/v8.9.1/bin
+source /opt/bitnami/use_jenkins
 cd $WORKSPACE/environment
 npm install
 cp -r ../contact ./src/pages/
