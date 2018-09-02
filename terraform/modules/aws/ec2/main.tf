@@ -26,7 +26,7 @@ resource "aws_instance" "web" {
 
 resource "aws_instance" "jenkins" {
   depends_on    = ["aws_instance.web"]
-  ami           = "ami-04bdbc15b433e716b"
+  ami           = "ami-06d98071a4e5eeb4a"
   instance_type = "t2.micro"
   associate_public_ip_address=true
   key_name = "jenkins"
@@ -67,5 +67,6 @@ output "web-server-ip" {
 }
 
 output "jenkins-ip" {
-  value = "${aws_instance.jenkins.public_ip}"
+  #value = "${aws_instance.jenkins.public_ip}"
+  value = "52.214.45.163"
 }
