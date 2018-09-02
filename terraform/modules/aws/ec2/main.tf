@@ -1,4 +1,5 @@
 variable "apiid" {}
+variable "eip_alloc_id" {}
 
 resource "aws_instance" "web" {
   ami           = "ami-add175d4"
@@ -54,6 +55,11 @@ resource "aws_instance" "jenkins" {
   tags {
     Name = "jenkins"
   }
+}
+
+resource "aws_eip_association" "eip_assoc" {
+  instance_id   = "${aws_instance.jenkins.id}"
+  allocation_id = "${var.eip_alloc_id}"
 }
 
 output "web-server-ip" {

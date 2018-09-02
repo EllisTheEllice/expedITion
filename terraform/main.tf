@@ -18,6 +18,8 @@ variable "aws_region" {}
 //variable "aws_s3_bucketname" {}
 variable "aws_api_apiname" {}
 
+variable "aws_eip_alloc_id" {}
+
 
 provider "aws" {
   access_key = "${var.aws_access_key}"
@@ -56,6 +58,7 @@ module "aws_ec2" {
   source     = "./modules/aws/ec2"
   //apiid      = "${module.aws_apigateway.apiid}"
   apiid      = "${module.aws_apigateway.api_id}"  
+  eip_alloc_id="${var.aws_eip_alloc_id}"
 }
 
 /*
